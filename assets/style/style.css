@@ -1,0 +1,246 @@
+*{
+    margin: 0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: whitesmoke;
+}
+
+nav{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    width: 100%;
+}
+.logo{
+    display: flex;
+    margin-left: 20px;
+}
+.logo i{
+    position: relative;
+    top: 10%;
+}
+.a-logo{
+    text-decoration: none;
+    color: black;
+    text-transform: capitalize;
+    font-size: 10px;
+}
+
+.nav-ul{
+    list-style: none;
+    display: flex;
+    
+}
+
+.live::before{
+    content: "";
+    display: inline-block;
+    background-color: red;
+    border-radius: 10px;
+    width: 4px;
+    height: 4px;
+    margin-right: 3px;
+    animation: live 1s infinite;
+
+}
+.nav-ul a{
+    margin: 10px;
+    
+}
+.nav-ul a:active {
+    background-color: black ;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+.main-aside{
+    display: flex;
+}
+.main{
+    width: 70%;
+
+}
+.politics{
+    margin-top: 10px;
+    margin-left: 20%;
+    text-transform: uppercase;
+    
+}
+.politics h2{
+    margin-bottom: 5px;
+}
+
+.cards{
+    margin-top: 10px;
+    margin-left: 20%;
+    display: flex;
+    gap: 10px;
+}
+.card{
+    width: 90px;
+    height: fit-content;
+    border-radius: 10px;
+    font-size: 10px;
+    text-transform: capitalize;
+    
+}
+.card img{
+    border-radius: 10px 10px 0px 0px;
+}
+.h-p{
+    margin-left: 3px;
+    line-height: 10px;
+}
+.card p{
+    font-size: 6px;
+    color: #797878;
+}
+
+.aside{
+    width: 30%;
+}
+.weather{
+    margin: 20px auto;
+    width: 75%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    text-transform: capitalize;
+    line-height: 30px;
+    position: relative;
+    
+    
+}
+.weather-h5{
+    position: absolute;
+    top: 0px;
+    
+}
+.sunicon-temprature{
+    margin-top: -5px;
+}
+.degree{
+    display: inline-block;
+}
+.weekdays{
+    display: flex;
+    justify-content: space-around;
+    text-transform:capitalize;
+    color: #79787865;
+    font-weight: 800;
+    font-size: 15px;
+    
+}
+
+.degrees{
+  
+  color: black;
+    
+    margin-top: -15px;
+   
+}
+
+.exchange-rates{
+    background-color: rgb(106, 115, 116);
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: bolder;
+}
+.ratings{
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-size: 10px;
+    height: fit-content;
+}
+.head{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.live2{
+    color: rgb(252, 72, 72);
+     width: 50px;
+    height: 25px; 
+    font-size: 6px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.team-names{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:0px;
+    font-size: 5px;
+}
+
+.ratings img{
+    border-radius:50%;
+}
+.scores{
+    text-transform: uppercase;
+    font-size: 10px;
+    
+}
+.footer{
+    background-color: white;
+    color: black;
+    font-size: 15px;
+    text-transform: capitalize;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+}
+.standings-main{
+    margin: 20px auto;
+}
+.standings-main th{
+   padding-left: 30px;
+   font-size: 10px;
+}
+.thead{
+   padding-left: 30px;
+  
+}
+.club{
+    padding-right: 50px;
+    
+}
+.inputs{
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+.matches{
+    width: 150%;
+    position: relative;
+    right: 250px;
+
+
+}
+.input-live{
+    display: flex;
+    flex-direction: row;
+ 
+}
+
+
+@keyframes live {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
