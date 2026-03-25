@@ -1,3 +1,5 @@
+let rates=document.querySelector('.exchange-rates')
+
 
 export async function currenyApi() {
   const data = await fetch(
@@ -6,6 +8,24 @@ export async function currenyApi() {
 
   const response = await data.json();
 
-  console.log(response.conversion_rates);
-}
+  let rate = "<h3>exchange ratings</h3>";
+  let list=Object.entries(response.conversion_rates) 
+  let list2=list.slice(0,4)
+  for(let i=0;i<=list2.length;i++){ 
+    rate += `
+      <div class="ratings">
+        <h6>${list[i][0]}</h6>
+        <h6>${list[i][1]}</h6>
+        
+      </div>
+      <hr />
+    `;
+  }
+    
+    
 
+  
+
+  rates.innerHTML = rate;
+}
+currenyApi()
