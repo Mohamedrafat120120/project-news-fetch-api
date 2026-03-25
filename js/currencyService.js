@@ -3,7 +3,7 @@ let rates=document.querySelector('.exchange-rates')
 
 export async function currenyApi() {
   const data = await fetch(
-    "https://v6.exchangerate-api.com/v6/f01bba377b6534832df67446/latest/USD"
+    "https://v6.exchangerate-api.com/v6/0bdab48841fd277c143565fd/latest/USD"
   );
 
   const response = await data.json();

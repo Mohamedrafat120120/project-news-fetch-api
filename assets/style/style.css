@@ -63,6 +63,7 @@ nav{
 }
 .main{
     width: 70%;
+    gap: 10px;
 
 }
 .politics{
@@ -195,7 +196,7 @@ nav{
     background-color: rgb(255, 255, 255);
     text-transform: capitalize;
     line-height: 30px;
-    font-size: 25px;
+    font-size: 30px;
     font-weight:900;
 }
 .head{
@@ -208,7 +209,7 @@ nav{
     color: rgb(252, 72, 72);
      width: 50px;
     height: 25px; 
-    font-size: 8px;
+    font-size: 15px;
     border-radius: 15px;
     text-align: center;
 }
@@ -232,32 +233,42 @@ nav{
 }
 .standings-main{
     margin: 20px auto;
+    text-align: center;
+
 }
 .standings-main th{
-   padding-left: 30px;
-   font-size: 18px;
+   padding-left: 80px;
+   font-size: 25px;
+   text-align: center;
+
 }
-.thead{
-   padding-left: 30px;
-  
-}
+
 .club{
-    padding-right: 50px;
+    padding-right: 55px;
     
 }
 .state{
     margin: 5% 50% ;
+    font-size: 50px;
 }
 .table-title{
     display: flex;
     flex-direction: column;
+    text-align: center;
+    
 }
 .table-title h2{
     margin: auto;
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+    
+
 }
 .tables{
     display: flex;
     justify-content: space-evenly;
+    
 }
 
 
