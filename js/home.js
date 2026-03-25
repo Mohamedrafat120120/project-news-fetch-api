@@ -1,6 +1,6 @@
 import {currenyApi} from "./currencyService.js"
 import {weatherApi} from "./weatherService.js"
-import {sportshomeApi} from "./sportsService.js"
+import {sportshomeApi} from "./matches.js"
 
 
 

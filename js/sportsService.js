@@ -1,116 +1,37 @@
-document.addEventListener("DOMContentLoaded", () => {
- sportsApi()
-})
+let politcs=document.querySelector(".sports")
 
-async function sportsApi() {
-  const live = document.querySelector(".ratings")
-  if (!tbody) {
-    console.error("tbody not found")
-    return
-  }
+export async function sportsSectionApi(){
+  const data = await fetch(
+    "https://gnews.io/api/v4/search?q=Sports&lang=en&max=5&apikey=c182722ca3c40a01dc7cf27b64cfd033"
+  );
 
-  try {
-    const data = await fetch(
-      "https://apiv2.allsportsapi.com/football/?met=Livescore&APIkey=d8465030b91ec02972bf4c9fc213dd0f5e7cf9b665e1f1d3440ee6775b858146"
-    )
-
-    const response = await data.json()
-    console.log(response)
-
-    if (!response.success || !response.result || !response.result.total) {
-      console.error("Bad API response", response)
-      return
-    }
-
-    const rows = response.result.slice(0,)
-
-    let tr = ``
-    for (let i = 0; i < rows.length; i++) {
-      tr += `
-       <div class="team-names">
-                     <img
-                       src="./images/download (3).jpg"
-                       alt=""
-                       width="20px"
-                       height="20px"
-                     />
-                     <h4>${rows[i].event_home_team}</h4>
-                   </div>
-                   <h4>${rows[i].event_final_result}</h4>
-                   <div class="team-names">
-                     <img
-                       src="./images/Zamalek_SC_logo.svg.png"
-                       alt=""
-                       width="20px"
-                       height="20px"
-                     />
-                     <h4>${rows[i].event_away_team}</h4>
-                   </div>
-                 </div>
-        
-      `
-    }
-
-    live.innerHTML = tr
-    console.log(rows)
-  } catch (error) {
-    console.error("Fetch failed:", error)
-  }
+  const response = await data.json();
+  let cards=`<h2>Sports</h2>
+  <hr class="line" />`
+  let general=response.articles.slice(0,4)
+for(let i=0;i<general.length;i++){
+          cards+=`
+  
+      <div class="cards">
+        <div class="card">
+          <img
+            src="${general[i].image}"
+            alt=""
+            width="90px"
+            height="60px"
+          />
+          <div class="h-p">
+            <h5>${general[i].title}</h5>
+            <p>
+              ${general[i].description}
+            </p>
+          </div>
+        </div>
+      
+      </div>
+  `
 }
-
-
-export async function sportshomeApi() {
-  const live = document.querySelector(".ratings")
-  if (!tbody) {
-    console.error("tbody not found")
-    return
+politcs.innerHTML=cards;
+    
   }
-
-  try {
-    const data = await fetch(
-      "https://apiv2.allsportsapi.com/football/?met=Livescore&APIkey=d8465030b91ec02972bf4c9fc213dd0f5e7cf9b665e1f1d3440ee6775b858146"
-    )
-
-    const response = await data.json()
-    console.log(response)
-
-    if (!response.success || !response.result || !response.result.total) {
-      console.error("Bad API response", response)
-      return
-    }
-
-    const rows = response.result.slice(0, 4)
-
-    let tr = ``
-    for (let i = 0; i < rows.length; i++) {
-      tr += `
-       <div class="team-names">
-                     <img
-                       src="./images/download (3).jpg"
-                       alt=""
-                       width="20px"
-                       height="20px"
-                     />
-                     <h4>${rows[i].event_home_team}</h4>
-                   </div>
-                   <h4>${rows[i].event_final_result}</h4>
-                   <div class="team-names">
-                     <img
-                       src="./images/Zamalek_SC_logo.svg.png"
-                       alt=""
-                       width="20px"
-                       height="20px"
-                     />
-                     <h4>${rows[i].event_away_team}</h4>
-                   </div>
-                 </div>
-        
-      `
-    }
-
-    live.innerHTML = tr
-    console.log(rows)
-  } catch (error) {
-    console.error("Fetch failed:", error)
-  }
-}
+newsApi()
